@@ -26,15 +26,20 @@ nav .x {
   display: none;
 }
 
-body {
-  background: var(--clr-primary);
+body,
+html {
   font-family: "Roboto", sans-serif;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
   overflow: hidden;
 }
 
+body {
+  background: var(--clr-primary);
+}
+
 .container {
-  height: 100vh;
+  height: 100%;
   width: 100%;
   overflow-y: scroll;
   scroll-behavior: smooth;
@@ -65,13 +70,6 @@ a {
 
 a:active {
   outline: none;
-}
-
-#section {
-  background: var(--clr-primary);
-  color: var(--clr-font);
-  width: 100% !important;
-  height: 100vh !important;
 }
 
 .bottomline {
@@ -172,7 +170,7 @@ nav li:active::after {
   flex-direction: column;
   justify-content: space-between;
   width: 100%;
-  height: 100vh;
+  height: 100%;
 }
 
 .name {
@@ -282,7 +280,6 @@ nav li:active::after {
 /* PROJECTS */
 
 .projects {
-  background: var(--clr-primary);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -337,10 +334,9 @@ nav li:active::after {
   justify-content: center;
   align-items: center;
 
-  background: var(--clr-primary);
   color: var(--clr-font);
   width: 100%;
-  height: 100vh;
+  height: 100%;
 }
 
 .resume-btn {
@@ -365,7 +361,6 @@ nav li:active::after {
 /* ABOUT */
 
 .about {
-  background: var(--clr-primary);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -374,7 +369,7 @@ nav li:active::after {
   flex-direction: column;
   justify-content: center;
   width: 100%;
-  height: 100vh;
+  height: 100%;
 }
 
 .about p,
@@ -468,10 +463,9 @@ nav li:active::after {
 .contact {
   display: flex;
   flex-direction: column;
-  background: var(--clr-primary);
   color: var(--clr-font);
   width: 100% !important;
-  height: 100vh !important;
+  height: 100% !important;
 }
 
 .contact button {
@@ -593,8 +587,8 @@ nav li:active::after {
     justify-content: center;
     z-index: 1;
     position: absolute;
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    height: 100%;
     background: rgba(0, 0, 0, 0.863);
     transition: transform 0.5s;
   }
@@ -670,7 +664,7 @@ nav li:active::after {
     font-size: 3.5em;
   }
   .disc {
-    width: 100vw;
+    width: 100%;
   }
 }
 
@@ -742,7 +736,7 @@ nav li:active::after {
   }
 
   .disc {
-    width: 100vw;
+    width: 100%;
   }
 
   .arrow {
@@ -769,10 +763,6 @@ nav li:active::after {
 
   .contact-box {
     transform: scale(0.75);
-  }
-
-  .contact button {
-    display: none;
   }
 }
 
