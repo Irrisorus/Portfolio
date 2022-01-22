@@ -203,6 +203,7 @@ nav li:active::after {
   margin-left: auto;
   gap: 1em;
   margin-right: 1em;
+  margin-bottom: 2em;
 }
 
 .linkedin {
