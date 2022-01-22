@@ -201,10 +201,9 @@ nav li:focus::after {
 
 .contactlinks {
   display: flex;
-  justify-content: end;
+  margin-left: auto;
   gap: 1em;
-  margin-right: 1rem;
-  margin-bottom: 2rem;
+  margin-right: 1em;
 }
 
 .linkedin {
