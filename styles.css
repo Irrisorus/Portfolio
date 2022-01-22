@@ -12,6 +12,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  -webkit-overflow-scrolling: touch;
 }
 
 nav .burger {
@@ -43,6 +44,7 @@ body {
   width: 100%;
   overflow-y: scroll;
   scroll-behavior: smooth;
+  -webkit-scroll-behavior: smooth;
   overflow-x: hidden;
 }
 
