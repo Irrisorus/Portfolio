@@ -62,7 +62,7 @@ a {
   color: white;
 }
 
-a:focus {
+a:active {
   outline: none;
 }
 
@@ -126,7 +126,7 @@ nav li a {
 }
 
 nav a:hover,
-nav a:focus {
+nav a:active {
   cursor: pointer;
   color: rgb(255, 196, 0);
 }
@@ -146,7 +146,7 @@ nav li::after {
 }
 
 nav li:hover::after,
-nav li:focus::after {
+nav li:active::after {
   height: 1.5px;
   width: 75%;
   border-radius: 0%;
@@ -216,7 +216,7 @@ nav li:focus::after {
 }
 
 .linkedin:hover,
-.linkedin:focus {
+.linkedin:active {
   background: url(icons/linkedin-yellow.png);
   background-size: cover;
 }
@@ -232,7 +232,7 @@ nav li:focus::after {
 }
 
 .github:hover,
-.github:focus {
+.github:active {
   background: url(icons/github-yellow.png);
   background-size: cover;
 }
@@ -252,7 +252,7 @@ nav li:focus::after {
 }
 
 .arrow:hover,
-.arrow:focus {
+.arrow:active {
   transform: translateY(5px);
 }
 .infolinks {
@@ -273,7 +273,7 @@ nav li:focus::after {
 }
 
 .infolinks li:hover,
-.infolinks li:focus {
+.infolinks li:active {
   transform: translateY(-2px);
   color: var(--clr-accent);
 }
@@ -323,7 +323,7 @@ nav li:focus::after {
 }
 
 .project-box img:hover,
-.project-box img:focus {
+.project-box img:active {
   opacity: 1;
   transform: scale(1.025);
   box-shadow: 0px 0px 1px 3px var(--clr-accent);
@@ -357,7 +357,7 @@ nav li:focus::after {
 }
 
 .resume-btn:hover,
-.resume-btn:focus {
+.resume-btn:active {
   box-shadow: 0 0 50px 1px var(--clr-accent);
 }
 
@@ -490,7 +490,7 @@ nav li:focus::after {
 }
 
 .contact button:hover,
-.contact button:focus {
+.contact button:active {
   box-shadow: 0 0 25px 1px var(--clr-accent);
 }
 
@@ -517,7 +517,7 @@ nav li:focus::after {
 }
 
 .contact-box a:hover,
-.contact-box a:focus {
+.contact-box a:active {
   cursor: pointer;
   color: rgb(255, 196, 0);
 }
@@ -537,7 +537,7 @@ nav li:focus::after {
 }
 
 .contact-box a:hover::after,
-.contact-box a:focus::after {
+.contact-box a:active::after {
   height: 1.5px;
   width: 75%;
   border-radius: 0%;
@@ -642,7 +642,7 @@ nav li:focus::after {
   }
 
   #slider li:hover::after,
-  #slider li:focus::after {
+  #slider li:active::after {
     height: 1.5px;
     width: 75%;
     border-radius: 0%;
