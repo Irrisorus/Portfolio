@@ -595,8 +595,7 @@ nav li:hover::after {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    font-size: 2em;
-    gap: 4em;
+    gap: 4rem;
     padding: 1em;
     transform: translateY(-4px);
   }
@@ -604,7 +603,7 @@ nav li:hover::after {
   #slider li {
     position: relative;
     list-style-type: none;
-    font-size: 1.75em;
+    font-size: 2.5rem;
     color: white;
     font-weight: 300;
     letter-spacing: 0.075em;
@@ -696,6 +695,14 @@ nav li:hover::after {
     width: 280px;
     margin-right: auto;
   }
+
+  .contact-box {
+    transform: scale(0.85);
+  }
+
+  .ampersand {
+    transform: scale(0.7) translateY(10px);
+  }
 }
 
 @media (max-width: 420px) {
@@ -707,14 +714,30 @@ nav li:hover::after {
     width: 100vw;
   }
 
+  .arrow {
+    transform: scale(0.75);
+  }
+
+  .ampersand {
+    transform: scale(0.7) translateY(10px);
+  }
+
   .project-box img {
     width: 320px;
     height: 270px;
   }
 
+  .disc {
+    transform: scale(0.9);
+  }
+
   .resume-btn {
     font-size: 2.25em;
     padding: 2rem 5rem;
+  }
+
+  .contact-box {
+    transform: scale(0.75);
   }
 }
 
