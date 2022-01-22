@@ -27,6 +27,7 @@ nav .x {
 }
 
 body {
+  background: var(--clr-primary);
   font-family: "Roboto", sans-serif;
   height: 100vh;
   overflow: hidden;
