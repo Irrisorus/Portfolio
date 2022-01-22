@@ -348,10 +348,9 @@ nav li:focus::after {
   font-size: 3em;
   font-weight: 200;
   padding: 2rem 8rem;
-  border-radius: 0.5em;
   background: none;
   outline: 1px solid var(--clr-accent);
-  border: none;
+  border-radius: 20px;
   color: white;
   cursor: pointer;
   transition: box-shadow 0.25s, background-color 0.25s;
