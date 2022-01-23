@@ -285,7 +285,7 @@ nav li:active::after {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  padding-top: 10em;
+  padding-top: 6.5em;
   padding-bottom: 10em;
 }
 
@@ -473,7 +473,6 @@ nav li:active::after {
   font-family: "Roboto", sans-serif;
   display: inline;
   width: 200px;
-  margin: 0 auto;
   font-size: 1.25em;
   padding: 1rem 1rem;
   border-radius: 0.5em;
@@ -483,6 +482,11 @@ nav li:active::after {
   background: none;
   color: white;
   border: 1px solid var(--clr-accent);
+  user-select: none;
+}
+
+.contact a {
+  margin: 0 auto;
 }
 
 .contact button:hover,
