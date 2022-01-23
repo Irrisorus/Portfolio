@@ -313,7 +313,7 @@ nav li:active::after {
 }
 
 .project-box img {
-  opacity: 0.25;
+  opacity: 0.65;
   width: 499px;
   height: 450px;
   border-radius: 1.5em;
