@@ -44,6 +44,7 @@ body {
   overflow-y: scroll;
   scroll-behavior: smooth;
   overflow-x: hidden;
+  will-change: transform;
 }
 
 ::-webkit-scrollbar {
@@ -306,7 +307,6 @@ nav li:active::after {
 .project-box {
   display: grid;
   grid-template-columns: 550px auto;
-  grid-row: auto auto;
   grid-row-gap: 50px;
   border-radius: 1em;
   justify-content: center;
