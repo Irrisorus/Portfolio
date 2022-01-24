@@ -126,6 +126,14 @@ projectsLink.addEventListener("click", function () {
   bubble[1].classList.add("active-bubble");
 });
 
+arrow.addEventListener("click", function () {
+  console.log("Clicked arrow");
+  for (let b of bubble) {
+    b.classList.remove("active-bubble");
+  }
+  bubble[1].classList.add("active-bubble");
+});
+
 resumeLink.addEventListener("click", function () {
   console.log("Clicked resumeLink");
   for (let b of bubble) {
