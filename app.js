@@ -6,10 +6,149 @@ let burger = document.querySelector(".burger");
 let line = document.querySelectorAll(".line");
 let x = document.querySelector(".x");
 let slider = document.querySelector("#slider");
+let bubble = document.querySelectorAll(".bubble");
+let resumeBtn = document.querySelector(".resume-btn");
+let arrow = document.querySelector(".arrow");
+let project = document.querySelector(".project3");
+let p1 = document.querySelector(".p1");
+let phone = document.querySelector(".phone");
+let jsDesign = document.querySelector(".jsdesign");
+let projectsLink = document.querySelector(".projectslink");
+let resumeLink = document.querySelector(".resumelink");
+let aboutLink = document.querySelector(".aboutlink");
+let contactLink = document.querySelector(".contactlink");
+let scrollBtn = document.querySelector(".scrollbtn");
 
 title.style.transition = "transform 2s, opacity 2s ease-in";
 linkedin.style.transition = "opacity 2s ease-in, background 0.25s ease-out";
 github.style.transition = "opacity 2s ease-in, background 0.25s ease-out";
+bubble[0].classList.add("active-bubble");
+
+window.addEventListener("wheel", function (e) {
+  //MAIN
+  if (isInViewport(arrow)) {
+    bubble[0].classList.add("active-bubble");
+  } else {
+    bubble[0].classList.remove("active-bubble");
+  }
+  //PROJECTS
+  if (isInViewport(project)) {
+    bubble[1].classList.add("active-bubble");
+  } else {
+    bubble[1].classList.remove("active-bubble");
+  }
+  //RESUME
+  if (isInViewport(resumeBtn)) {
+    bubble[2].classList.add("active-bubble");
+  } else {
+    bubble[2].classList.remove("active-bubble");
+  }
+  //ABOUT
+  if (isInViewport(p1)) {
+    bubble[3].classList.add("active-bubble");
+  } else {
+    bubble[3].classList.remove("active-bubble");
+  }
+  //CONTACT
+  if (isInViewport(phone)) {
+    bubble[4].classList.add("active-bubble");
+  } else {
+    bubble[4].classList.remove("active-bubble");
+  }
+});
+let counter = 0;
+for (let b of bubble) {
+  counter++;
+  b.id += counter;
+  b.addEventListener("click", function (e) {
+    for (let b of bubble) {
+      b.classList.remove("active-bubble");
+    }
+
+    if (e.target.id === "1") {
+      console.log("bubble 1");
+      bubble[0].classList.add("active-bubble");
+    } else {
+      bubble[0].classList.remove("active.bubble");
+    }
+
+    if (e.target.id === "2") {
+      console.log("bubble 2");
+      bubble[1].classList.add("active-bubble");
+    } else {
+      bubble[1].classList.remove("active.bubble");
+    }
+
+    if (e.target.id === "3") {
+      console.log("bubble 3");
+      bubble[2].classList.add("active-bubble");
+    } else {
+      bubble[2].classList.remove("active.bubble");
+    }
+
+    if (e.target.id === "4") {
+      console.log("bubble 4");
+      bubble[3].classList.add("active-bubble");
+    } else {
+      bubble[3].classList.remove("active.bubble");
+    }
+
+    if (e.target.id === "5") {
+      console.log("bubble 5");
+      bubble[4].classList.add("active-bubble");
+    } else {
+      bubble[4].classList.remove("active.bubble");
+    }
+  });
+}
+
+jsDesign.addEventListener("click", function () {
+  console.log("Clicked JSDesigns");
+  for (let b of bubble) {
+    b.classList.remove("active-bubble");
+  }
+  bubble[0].classList.add("active-bubble");
+});
+
+scrollBtn.addEventListener("click", function () {
+  console.log("Clicked scrollBtn");
+  for (let b of bubble) {
+    b.classList.remove("active-bubble");
+  }
+  bubble[0].classList.add("active-bubble");
+});
+
+projectsLink.addEventListener("click", function () {
+  console.log("Clicked projectsLink");
+  for (let b of bubble) {
+    b.classList.remove("active-bubble");
+  }
+  bubble[1].classList.add("active-bubble");
+});
+
+resumeLink.addEventListener("click", function () {
+  console.log("Clicked resumeLink");
+  for (let b of bubble) {
+    b.classList.remove("active-bubble");
+  }
+  bubble[2].classList.add("active-bubble");
+});
+
+aboutLink.addEventListener("click", function () {
+  console.log("Clicked aboutLink");
+  for (let b of bubble) {
+    b.classList.remove("active-bubble");
+  }
+  bubble[3].classList.add("active-bubble");
+});
+
+contactLink.addEventListener("click", function () {
+  console.log("Clicked contactLink");
+  for (let b of bubble) {
+    b.classList.remove("active-bubble");
+  }
+  bubble[4].classList.add("active-bubble");
+});
 
 setTimeout(() => {
   title.style.transform = "translateY(0px)";
@@ -59,14 +198,17 @@ x.addEventListener("click", function () {
   slider.classList.add("up");
   burger.style.display = "flex";
 });
-// *************************************
 
-// github.addEventListener("hover", function () {
-//   github.style.opacity = "0";
-//   githubyellow.style.opacity = "1";
-// });
+// We want to write code that knows when we are in a certain section, if we know when we are in a certain section, we can highlight the corresponding bubble YELLOW //
 
-// linkedin.addEventListener("hover", function () {
-//   linkedin.style.opacity = "0";
-//   linkedinyellow.style.opacity = "1";
-// });
+var isInViewport = function (elem) {
+  var bounding = elem.getBoundingClientRect();
+  return (
+    bounding.top >= 0 &&
+    bounding.left >= 0 &&
+    bounding.bottom <=
+      (window.innerHeight || document.documentElement.clientHeight) &&
+    bounding.right <=
+      (window.innerWidth || document.documentElement.clientWidth)
+  );
+};

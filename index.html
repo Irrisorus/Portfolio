@@ -16,8 +16,9 @@
         <li><a href="#contact">Contact</a></li>
       </ul>
     </div>
+
     <nav>
-      <h2>
+      <h2 class="jsdesign">
         <a href="#main"><span>JS</span>Design</a>
       </h2>
       <div class="burger">
@@ -27,12 +28,23 @@
       </div>
       <div class="x">X</div>
       <ul>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#resume">Resume</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <li class="projectslink"><a href="#projects">Projects</a></li>
+        <li class="resumelink"><a href="#resume">Resume</a></li>
+        <li class="aboutlink"><a href="#about">About</a></li>
+        <li class="contactlink"><a href="#contact">Contact</a></li>
       </ul>
     </nav>
+
+    <div class="sidenav">
+      <ul>
+        <a href="#main"><li class="bubble"></li></a>
+        <a href="#projects"><li class="bubble"></li></a>
+        <a href="#resume"><li class="bubble"></li></a>
+        <a href="#about"><li class="bubble"></li></a>
+        <a href="#contact"><li class="bubble"></li></a>
+      </ul>
+    </div>
+
     <div class="container">
       <section class="main" id="main">
         <!-- <h1>Jack Stevens | Web Designer</h1>
@@ -49,6 +61,7 @@
             <img src="icons/ampersand.png" alt="" class="ampersand" /> Developer
           </div>
         </div>
+
         <a href="#projects" class="arrow-a"
           ><img
             src="icons/yellow-arrow.png"
@@ -70,13 +83,31 @@
         <p>Some of my work <span>:</span></p>
         <div class="project-box">
           <a href="https://jakalanern.github.io/Tic-Tac-Toe/"
-            ><img src="sites/tictacotoe - resize.png" alt="" class="project1"
+            ><img
+              src="sites/tictacotoe - resize.png"
+              alt=""
+              class="project1"
+              id="project-img"
           /></a>
           <a href="https://jakalanern.github.io/Artfolio/#main"
-            ><img src="sites/site7-resize.png" alt="" class="project2"
+            ><img
+              src="sites/site7-resize.png"
+              alt=""
+              class="project2"
+              id="project-img"
           /></a>
-          <img src="sites/site5-resize.png" alt="" class="project3" />
-          <img src="sites/site1-resize.png" alt="" class="project4" />
+          <img
+            src="sites/site5-resize.png"
+            alt=""
+            class="project3"
+            id="project-img"
+          />
+          <img
+            src="sites/site1-resize.png"
+            alt=""
+            class="project4"
+            id="project-img"
+          />
         </div>
       </section>
 
@@ -106,7 +137,7 @@
           <p class="email">
             Jack<span>.</span>Withers<span>.</span>Stevens<span>@</span>gmail<span>.</span>com
           </p>
-          <p class="#">
+          <p class="phone">
             <span>(</span>949<span>)</span> 291 <span>-</span> 5509
           </p>
           <p>
@@ -116,7 +147,7 @@
             <span>|</span> <a href="https://github.com/Jakalanern">GitHub</a>
           </p>
         </div>
-        <a href="#main"><button>Scroll To Top</button></a>
+        <a href="#main" class="scrollbtn"><button>Scroll To Top</button></a>
       </section>
     </div>
     <script src="app.js"></script>

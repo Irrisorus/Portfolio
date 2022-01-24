@@ -152,6 +152,53 @@ nav li:active::after {
   border-radius: 0%;
 }
 
+.sidenav {
+  position: fixed;
+  display: flex;
+  color: white;
+  top: 50%;
+  bottom: 50%;
+  right: 0;
+  z-index: 9999999;
+}
+
+.sidenav ul {
+  list-style: none;
+  margin-right: 1em;
+}
+
+.sidenav li {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 15px;
+  height: 15px;
+  margin-top: 1em;
+}
+
+.sidenav li::after {
+  position: absolute;
+  content: "";
+  width: 10px;
+  height: 10px;
+  background: white;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: width 0.3s, height 0.3s;
+}
+
+.sidenav li:hover::after {
+  width: 15px;
+  height: 15px;
+}
+
+.bubble.active-bubble:after {
+  width: 15px;
+  height: 15px;
+  background: var(--clr-accent);
+}
+
 .main h1 {
   font-weight: 400;
   font-size: 3.5em;
@@ -190,7 +237,7 @@ nav li:active::after {
   text-align: center;
   font-size: 4.5em;
   font-weight: 200;
-  margin-top: 3.5em;
+  margin-top: 5em;
   opacity: 0;
   transform: translateY(-400px);
 }
@@ -201,7 +248,7 @@ nav li:active::after {
 
 .contactlinks {
   display: flex;
-  margin-left: auto;
+  justify-content: center;
   gap: 1em;
   margin-right: 1em;
   margin-bottom: 2em;
@@ -239,16 +286,18 @@ nav li:active::after {
 }
 
 .arrow {
+  position: absolute;
   color: white;
   font-size: 3em;
   cursor: pointer;
   width: 75px;
   transition: transform 0.25s ease-in-out;
+  top: 80%;
 }
 
 .arrow-a {
+  width: 75px;
   margin: 0 auto;
-  margin-top: 1em;
   transform: translateX(-12.5px);
 }
 
@@ -551,14 +600,18 @@ nav li:active::after {
 }
 
 @media (max-width: 800px) {
+  .sidenav {
+    display: none;
+  }
+
   nav ul {
     display: none;
   }
 
   nav .burger {
+    display: initial;
     margin-top: auto;
     margin-bottom: auto;
-    display: initial;
     width: 40px;
     height: 30px;
     margin-right: 1.5em;
