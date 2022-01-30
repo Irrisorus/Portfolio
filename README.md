@@ -7,3 +7,5 @@ Smooth Scroll on Desktop
 Project Gallery w/ Links
 Resume
 About Me
+
+https://jakalanern.github.io/Portfolio-Official/
