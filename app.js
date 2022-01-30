@@ -18,6 +18,7 @@ let resumeLink = document.querySelector(".resumelink");
 let aboutLink = document.querySelector(".aboutlink");
 let contactLink = document.querySelector(".contactlink");
 let scrollBtn = document.querySelector(".scrollbtn");
+let container = document.querySelector(".container");
 
 title.style.transition = "transform 2s, opacity 2s ease-in";
 linkedin.style.transition = "opacity 2s ease-in, background 0.25s ease-out";
