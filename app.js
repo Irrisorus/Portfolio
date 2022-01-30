@@ -57,6 +57,40 @@ window.addEventListener("wheel", function (e) {
     bubble[4].classList.remove("active-bubble");
   }
 });
+
+window.addEventListener("touchmove", function (e) {
+  //MAIN
+  if (isInViewport(arrow)) {
+    bubble[0].classList.add("active-bubble");
+  } else {
+    bubble[0].classList.remove("active-bubble");
+  }
+  //PROJECTS
+  if (isInViewport(project)) {
+    bubble[1].classList.add("active-bubble");
+  } else {
+    bubble[1].classList.remove("active-bubble");
+  }
+  //RESUME
+  if (isInViewport(resumeBtn)) {
+    bubble[2].classList.add("active-bubble");
+  } else {
+    bubble[2].classList.remove("active-bubble");
+  }
+  //ABOUT
+  if (isInViewport(p1)) {
+    bubble[3].classList.add("active-bubble");
+  } else {
+    bubble[3].classList.remove("active-bubble");
+  }
+  //CONTACT
+  if (isInViewport(phone)) {
+    bubble[4].classList.add("active-bubble");
+  } else {
+    bubble[4].classList.remove("active-bubble");
+  }
+});
+
 let counter = 0;
 for (let b of bubble) {
   counter++;
