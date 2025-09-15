@@ -3,7 +3,7 @@
 :root {
   --clr-primary: rgba(0, 0, 0, 0.966);
   --clr-font: white;
-  --clr-accent: rgb(255, 196, 0);
+  --clr-accent: rgb(255, 145, 0)
 }
 
 *,
@@ -266,7 +266,7 @@ nav li:active::after {
 
 .linkedin:hover,
 .linkedin:active {
-  background: url(icons/linkedin-yellow.png);
+  background: url(icons/linkedin-orange.png);
   background-size: cover;
 }
 
@@ -282,11 +282,12 @@ nav li:active::after {
 
 .github:hover,
 .github:active {
-  background: url(icons/github-yellow.png);
+  background: url(icons/git-icon-orange.png);
   background-size: cover;
 }
 
 .arrow {
+  filter: hue-rotate(360deg);
   position: absolute;
   color: white;
   font-size: 3em;
@@ -512,6 +513,7 @@ nav li:active::after {
 /* CONTACT */
 
 .contact {
+  
   display: flex;
   flex-direction: column;
   color: var(--clr-font);
@@ -525,7 +527,7 @@ nav li:active::after {
   width: 200px;
   font-size: 1.25em;
   padding: 1rem 1rem;
-  border-radius: 0.5em;
+  border-radius: 10px;
   font-weight: 200;
   cursor: pointer;
   margin-bottom: 2em;
@@ -545,6 +547,7 @@ nav li:active::after {
 }
 
 .contact-box {
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -552,9 +555,41 @@ nav li:active::after {
   font-weight: 200;
   margin-top: auto;
   margin-bottom: auto;
+  gap: 10px;
   font-size: 2em;
   line-height: 2em;
   transform: translateY(25px);
+}
+.contact-box .email, .contact-box .phone{
+  cursor: copy;
+  padding: 0 10px;
+  transition: all 0.3s;
+  border-radius: 10px;
+}
+
+.contact-box .email:hover, .contact-box .phone:hover{
+  background-color: rgb(0, 0, 0);
+
+}
+#copy-notification {
+            position: fixed;
+            line-height: normal;
+            background-color: #363636ff;
+            color: white;
+            padding: 8px 12px;
+            border-radius: 4px;
+            font-size: 14px;
+            pointer-events: none;
+            opacity: 0;
+            transform: translateY(10px);
+            transition: opacity 0.3s, transform 0.3s;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+}
+
+#copy-notification.show {
+            opacity: 1;
+            transform: translateY(0);
 }
 
 .contact-box span {

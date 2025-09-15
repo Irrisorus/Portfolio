@@ -255,3 +255,59 @@ var isInViewport = function (elem) {
       (window.innerWidth || document.documentElement.clientWidth)
   );
 };
+
+
+//copy to clickboard 
+class ClipboardManager {
+            constructor() {
+                this.notification = document.getElementById('copy-notification');
+                this.init();
+            }
+
+            init() {
+                //adding sele
+                document.querySelectorAll('.copy-element').forEach(element => {
+                    element.addEventListener('click', (e) => {
+                        this.copyToClipboard(e);
+                    });
+                });
+            }
+
+            async copyToClipboard(event) {
+                const value = event.currentTarget.getAttribute('data-value');
+                
+         
+                    
+                    await navigator.clipboard.writeText(value);
+                    this.showNotification(event.clientX, event.clientY, 'Copied to clickboard!');
+                    
+              
+            }
+
+            showNotification(x, y, message, type = 'success') {
+                // positioning
+                
+                this.notification.textContent = message;
+                this.notification.style.left = (x) + 'px';
+                this.notification.style.top = (y-430) + 'px';
+                
+                
+                if (type === 'error') {
+                    this.notification.style.backgroundColor = '#f44336';
+                } else {
+                    this.notification.style.backgroundColor = '#363636ff';
+                }
+                
+              
+                this.notification.classList.add('show');
+                
+              
+                setTimeout(() => {
+                    this.notification.classList.remove('show');
+                }, 2000);
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            new ClipboardManager();
+        });
