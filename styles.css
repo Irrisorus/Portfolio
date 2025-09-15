@@ -209,8 +209,8 @@ nav li:active::after {
 }
 
 .main {
-  /* background-image: url(backgrounds/main.jpg),
-    linear-gradient(#00000094, #00000094); */
+  background-image: url(backgrounds/main.jpg),
+    linear-gradient(#00000094, #00000094);
   background-blend-mode: overlay;
   background-position: center;
   background-size: cover;
